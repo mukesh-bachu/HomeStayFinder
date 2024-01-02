@@ -1,0 +1,27 @@
+<%- include('partials/header') %>
+<div class="col-xs-12 col-md-9">
+    <div class="jumbotron p-5 m-4 bg-light">
+      <h1 class="display-4">Make a Reservation</h1>
+
+      <p class="lead">Welcome! To make a reservation, you need to be registered user to login. Let's get started!!!</p>
+      <hr class="my-4">
+      <p>We have all kinds of homes ranging from Cabins, Independent homes, Apartments, Castles etc.</p>
+    
+      <div>
+        <form action ="/users/register" method="GET"> 
+            <p>If you are new, please Register as a new user to log in and Make your reservation</p>
+            <button type="submit" class = "btn btn-danger">Resister</button>
+        </form>
+      </div>
+      <br></br>
+      <div>
+        <form action ="/users/login" method="GET"> 
+            <p>If you already registered, please log in to make a reservation</p>
+            <button type="submit" class = "btn btn-danger">Log in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+<%- include('partials/footer') %>

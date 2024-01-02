@@ -1,0 +1,45 @@
+<%- include('partials/header') %>
+
+<div class="container">
+<h1>Edit Property Details</h1>
+<form action="/properties/<%= property_id%>?_method=PUT" method="POST">
+    <div class="form-group col-md-2">
+        <label>Image name 1</label>
+        <input type="text" id="image1" name="image1" class="form-control">
+        </div>
+    <div class="form-group col-md-2">
+        <label>Image name 2</label>
+        <input type="text" id="image2" name="image2" class="form-control">
+        </div>
+    <div class="form-group col-md-2">
+        <label>Image name 3</label>
+        <input type="text" id="image3" name="image3" class="form-control">
+        </div>
+    <div class="form-group col-md-2">
+        <label>Amenities</label>
+        <input type="text" id="amenities" name="amenities" class="form-control">
+        </div>
+    <div class="form-group col-md-2">
+        <label>Cleaning Fee</label>
+        <input type="text" id="cleaningfee" name="cleaningfee" class="form-control">
+        </div>
+    <div class="form-group col-md-2">
+        <label>Price</label>
+        <input type="text" id="price" name="price" class="form-control">
+        </div>
+    <div class="form-group col-md-2">
+    <label>Description</label>
+    <textarea id="desc" name="desc" class="form-control">
+    </textarea>
+    </div>
+    <div class="form-group col-md-2">
+    <button type="submit" id="add" class="btn btn-outline-dark">Edit Property</button>
+    </div>
+
+</form>
+
+
+</div>
+
+
+<%- include('partials/footer') %>

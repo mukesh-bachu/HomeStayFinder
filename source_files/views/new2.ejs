@@ -1,0 +1,45 @@
+<%- include('partials/header') %>
+
+<div class="container">
+<h1>Registering  A New Host</h1>
+<form action="/host/register" method="POST">
+    <div class="form-group col-md-2">
+        <label>Host Name</label>
+        <input type="text" id="hostname" name="hostname" class="form-control">
+        </div>
+    <div class="form-group col-md-2">
+    <label>First Name</label>
+    <input type="text" id="firstname" name="firstname" class="form-control">
+    </div>
+    <div class="form-group col-md-2">
+    <label>Middle Name</label>
+    <input type="text" id="middlename" name="middlename" class="form-control">
+    </div>
+    <div class="form-group col-md-2">
+    <label>Last Name</label>
+    <input type="text" id="lastname" name="lastname" class="form-control">
+    </div>
+    <div class="form-group col-md-2">
+    <label>email</label>
+    <input type="text" id="email" name="email" class="form-control">
+    </div>
+    <div class="form-group col-md-2">
+    <label>Phone no</label>
+    <input type="text" id="phoneno" name="phoneno" class="form-control">
+    </div>
+    <div class="form-group col-md-2">
+    <label>Password</label>
+    <input type="text" id="password" name="password" class="form-control">
+    </div>
+
+    <div class="form-group col-md-2">
+    <button type="submit" id="add" class="btn btn-outline-dark">Add Host</button>
+    </div>
+
+</form>
+
+
+</div>
+
+
+<%- include('partials/footer') %>

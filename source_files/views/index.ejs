@@ -1,0 +1,82 @@
+<%- include('partials/header') %>
+<div class="d-flex">
+  <div class="row m-4 col-md-3">
+    <h2>Search Properties</h2>
+    <form action="/filter" method="GET">
+        <div class="form-group">
+        <label>City</label>
+        <input type="text" id="city" name="city" class="form-control">
+        </div>
+        <div class="form-group">
+        <label>Property type</label>
+        <input type="text" id="type" name="type" class="form-control">
+        </div>
+        <div class="form-group">
+        <button type="submit" id="add" class="btn  btn-primary btn-outline-dark hidden">Search</button>
+        </div>
+    </form>
+    
+    </div>
+    <div class="col-md-9">
+      <div class="jumbotron p-5 m-4 bg-light">
+        <h1 class="display-4">The Homestay Company</h1>
+  
+        <p class="lead">Welcome! This is a place where you can book our customized homes for your vacations, parties, workations etc</p>
+        <hr class="my-4">
+        <p>We have all kinds of homes ranging from Cabins, Independent homes, Apartments, Castles etc.</p>
+      </div>
+    </div>
+</div>
+
+  <div class="row">
+    <h1 class="m-4">Property Listing</h1>
+    <% properties.forEach(function(property){ %>
+    <div className="card p-2">
+        <div className="card-body">
+          <div class = "d-flex">
+            <div class = "col-6 p-5">
+              <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="/images/<%= property.img1 %>" class="d-block w-100" alt="..."/>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/images/<%= property.img2 %>" class="d-block w-100" alt="..."/>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/images/<%= property.img3 %>" class="d-block w-100" alt="..."/>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <div  class = "col-6 p-5">
+              <h1 class="card-title"><%= property.title %></h1>
+              <h5 class="card-title"><%= property.location %></h5>
+              <p class="card-text"><%= property.description %></p>
+              <a href="#" class="btn btn-primary"><%= property.price %></a>
+              <a href="/index/<%= property._id %>" class="btn btn-primary">Show details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <% }); %>
+
+
+  </div>
+
+
+<%- include('partials/footer') %>

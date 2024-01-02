@@ -1,0 +1,32 @@
+<%- include('partials/header') %>
+<div class="col-xs-12 col-md-9">
+    <div class="jumbotron p-5 m-4 bg-light">
+      <h1 class="display-4">Become a Host</h1>
+
+      <p class="lead">Welcome! To add your property, you need to be a registered user and log in.</p>
+      <hr class="my-4">
+      <div>
+        <form action ="/host/register" method="GET"> 
+          <p>If you are new, please Register as a new host to log in and add your Property.</p>
+            <button type="submit" class = "btn btn-danger">Resister</button>
+        </form>
+      </div>
+      <br></br>
+      <div>
+        <form action ="/host/login" method="GET"> 
+            <p>If you already registered, please log in to manage your properties.</p>
+            <button type="submit" class = "btn btn-danger">Log in</button>
+        </form>
+      </div>
+    
+    
+    
+    </div>
+
+
+
+
+  </div>
+
+
+<%- include('partials/footer') %>
